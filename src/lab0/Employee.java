@@ -94,6 +94,9 @@ public class Employee {
     }
 
     public final void setSsn(String ssn) {
+        if(ssn == null || ssn.isEmpty()) {
+            throw new IllegalArgumentException("Please enter a valid SSN");
+        }
         this.ssn = ssn;
     }
 
