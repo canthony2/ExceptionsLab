@@ -93,9 +93,9 @@ public class Employee {
         return ssn;
     }
 
-    public final void setSsn(String ssn) {
-        if(ssn == null || ssn.isEmpty()) {
-            throw new IllegalArgumentException("Please enter a valid SSN");
+    public final void setSsn(String ssn) throws IllegalArgumentException {
+        if(ssn == null || ssn.isEmpty() || ssn.length() < 9) {
+            throw new IllegalArgumentException("Please enter a valid SSN in the format XXXXXXXXX");
         }
         this.ssn = ssn;
     }
