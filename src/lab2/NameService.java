@@ -23,12 +23,12 @@ public class NameService {
         
         // Your code goes here.
         if(fullName == null || fullName.isEmpty()) {
-            throw new IllegalArgumentException("Full name is mandatory. Please enter full name in format First Last (e.g. John Smith)");
+            throw new IllegalArgumentException();
         }
         
         String[] parts = fullName.split(" ");
         if(parts.length < 2) {
-            throw new IllegalArgumentException("Full name must have first name and last name separated by a space");
+            throw new IllegalArgumentException();
         }
         
         lastName = parts[parts.length - 1];
