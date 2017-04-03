@@ -23,12 +23,12 @@ public class NameService {
         
         // Your code goes here.
         if(fullName == null || fullName.isEmpty()) {
-            throw new IllegalArgumentException("");
+            throw new IllegalArgumentException("Input Error: No name found; please enter your full name");
         }
         
         String[] parts = fullName.split(" ");
         if(parts.length < 2) {
-            throw new IllegalArgumentException("");
+            throw new IllegalArgumentException("Illegal Name: Please enter your full name");
         }
         
         lastName = parts[parts.length - 1];
