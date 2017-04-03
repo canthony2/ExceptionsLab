@@ -9,12 +9,24 @@ package lab3;
  *
  * @author knyghtspup
  */
-public class EmptyNameException extends Exception {
+public class EmptyNameException extends IllegalArgumentException {
+
+    private static final String MSG = "Input Error: No name found; please enter your full name";
 
     public EmptyNameException() {
-        
-        
-        
+        super(MSG);
+    }
+
+    public EmptyNameException(String s) {
+        super(MSG);
+    }
+
+    public EmptyNameException(String message, Throwable cause) {
+        super(MSG, cause);
+    }
+
+    public EmptyNameException(Throwable cause) {
+        super(cause);
     }
     
 }
